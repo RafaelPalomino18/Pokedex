@@ -15,6 +15,7 @@ function convertPokemonToLi(pokemon){
 
                 <img src="${pokemon.sprites.other.dream_world.front_default}" 
                     alt="${pokemon.name}">   
+                
             </div>        
         </li>
     `
@@ -27,4 +28,11 @@ pokeApi.getPokemons().then((pokemons = []) => {
     const newHtml = pokemons.map(convertPokemonToLi).join('')
     pokemonList.innerHTML = newHtml
 })
+
+
+/* 
+Imagens melhores para os pokemons
+<img src="${pokemon.sprites.other['official-artwork'].front_default}" alt="${pokemon.name}">
+
+ */
  
