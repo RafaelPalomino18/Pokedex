@@ -12,7 +12,9 @@ function convertPokeApiDetailToPokemon(pokeDetail){
     pokemon.types = types
     pokemon.type = type
 
-    pokemon.photo = pokeDetail.sprites.other.dream_world.front_default
+    // dois caminhos diferentes para a foto que preferir:
+    // pokemon.photo = pokeDetail.sprites.other.dream_world.front_default
+    pokemon.photo = pokeDetail.sprites.other['official-artwork'].front_default
 
     return pokemon
 }
