@@ -3,7 +3,7 @@ const pokeApi ={}
 
 function convertPokeApiDetailToPokemon(pokeDetail){
     const pokemon = new Pokemon()
-    pokemon.number = pokeDetail.order
+    pokemon.number = pokeDetail.id
     pokemon.name = pokeDetail.name
 
     const types = pokeDetail.types.map((typeSlot) => typeSlot.type.name)
@@ -12,7 +12,7 @@ function convertPokeApiDetailToPokemon(pokeDetail){
     pokemon.types = types
     pokemon.type = type
 
-    // dois caminhos diferentes para a foto que preferir:
+    // Utilizei outras fotos da api e comentei as fotos que estavam anteriormente:
     // pokemon.photo = pokeDetail.sprites.other.dream_world.front_default
     pokemon.photo = pokeDetail.sprites.other['official-artwork'].front_default
 
@@ -35,6 +35,3 @@ pokeApi.getPokemons = (offset = 0, limit = 5) =>{
         .then((detailRequests) => Promise.all(detailRequests))
         .then((pokemonsDetails) => pokemonsDetails)
 }
-
-
-

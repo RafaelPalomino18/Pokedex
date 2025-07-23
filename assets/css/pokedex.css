@@ -5,6 +5,29 @@
     padding: 0;
     list-style: none;
 }
+/*Alterei o titulo h1 e o container do titulo*/
+h1{
+    margin-top: 0;
+    padding-top: 0;
+    font-size: 1.3rem;
+}
+.divtitle {
+    width: 40%;
+    height: 3rem;
+    background-color: #E63946;
+    border-radius: 0 0 1rem 0;
+    margin-top: -2rem; 
+    margin-left: -1rem; 
+    padding: 0 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-weight: bold;
+    position: relative;
+    z-index: 2;
+}
+
 
 .normal {
     background-color: #A8A878;
@@ -124,7 +147,27 @@
 
 .pokemon .detail img {
     max-width: 100%;
-    height: 100px; /*aqui era 80*/
+    height: 100px; /*aqui era 70*/
+}
+
+.pagination {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    padding: 1rem;
+}
+
+.pagination button{
+    padding: .25rem .5rem;
+    margin: .25rem 0;
+    font-size: .825rem;
+    color: #fff;
+    background-color: #6c79db;
+    border: none;
+    border-radius: 1rem;
+    
 }
 
 @media screen and (min-width: 380px) {

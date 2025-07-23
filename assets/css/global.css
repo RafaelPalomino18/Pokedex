@@ -7,12 +7,21 @@ body{
     background-color: #f6f8fc;
 }
 
-.content{
-    width: 100vw;
-    height: 100vh;
-    padding: 1rem;
-    background-color: #fff;
+/*Alterei o content colocando bordas*/
+.content {
+  width: 100%;
+  margin: 1rem auto;
+  border-radius: 1rem;
+  padding: 1rem;
+  background-color: #fff;
+  border-top: 1rem solid #E63946;
+  border-bottom: 1rem solid #E63946;
+  position: relative;
+  padding-top: 2rem;
+  box-sizing: border-box;
+  background-color: #FEF9F2;
 }
+
 
 
 @media screen and (min-width: 992px) {
